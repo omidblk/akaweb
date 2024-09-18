@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('./sass/index.sass');
+@import url('./sass/main.scss');

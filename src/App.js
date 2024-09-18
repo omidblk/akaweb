@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { IntlProvider } from "react-intl";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppLocale from "./lang";
-// import Home from "./pages/home";
-// import Blogs from "./pages/blogs";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
 
-//--------------- dark theme -------------------
-// const darkTheme = createTheme({
-//   palette: {
-//     mode: "light",
-//   },
-// });
+
 //-- costomize palette color -- &&&&-- dark theme ----------
 const theme = createTheme({
   palette: {
@@ -37,20 +30,15 @@ const theme = createTheme({
 });
 
 // -------  language  ----------------
-// const messages = {
-//   en: messages_en,
-//   fr: messages_fr,
-// };
-const currentAppLocale = AppLocale["en"];
+
+const lang = 'fa'
+const currentAppLocale = AppLocale[lang];
 
 export default function App() {
-  // const [locale, setLocale] = useState("en");
 
-  // const switchLanguage = (lang) => {
-  //   setLocale(lang);
-  // };
   return (
-    <IntlProvider
+    <div className={lang==="fa" ?"fontRtl":''}>
+      <IntlProvider
       locale={currentAppLocale.locale}
       messages={currentAppLocale.messages}
     >
@@ -65,6 +53,7 @@ export default function App() {
         </BrowserRouter>
       </ThemeProvider>
     </IntlProvider>
+    </div>
   );
 }
 
