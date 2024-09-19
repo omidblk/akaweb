@@ -5,10 +5,13 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { IntlProvider } from "react-intl";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppLocale from "./lang";
+import UI from "./routes/ui";
+import User from "./routes/user";
+import Login from "./routes/user/login";
+import Register from "./routes/user/register";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
-
 
 //-- costomize palette color -- &&&&-- dark theme ----------
 const theme = createTheme({
@@ -31,28 +34,32 @@ const theme = createTheme({
 
 // -------  language  ----------------
 
-const lang = 'fa'
+const lang = "fa";
 const currentAppLocale = AppLocale[lang];
 
 export default function App() {
-
   return (
-    <div className={lang==="fa" ?"fontRtl":''}>
+    <div className={lang === "fa" ? "fontRtl" : ""}>
       <IntlProvider
-      locale={currentAppLocale.locale}
-      messages={currentAppLocale.messages}
-    >
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="blogs" exact element={<Blogs />} />
-            <Route path="*" element={<NoPage />} />
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    </IntlProvider>
+        locale={currentAppLocale.locale}
+        messages={currentAppLocale.messages}
+      >
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="blogs" exact element={<Blogs />} />
+              <Route path="Ui" exact element={<UI />} />
+              <Route path="user" element={<User />}>
+                <Route index element={<Login />} />
+                <Route path="register" element={<Register />} />
+              </Route>
+              <Route path="*" element={<NoPage />} />
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </IntlProvider>
     </div>
   );
 }

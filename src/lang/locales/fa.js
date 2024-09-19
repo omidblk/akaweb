@@ -1,3 +1,6 @@
 module.exports ={
-    "home":"خانه"
+    "home":"خانه",
+    "UIcomponents" : "اجزای ظاهری",
+    "login" : "ورود",
+    "register" : "ثبت نام",
 }
