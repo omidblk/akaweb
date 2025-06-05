@@ -1,3 +1,4 @@
+import IntlMessages from "../../lang/components/IntlMessages";
 
 
 export default function AdminFooter () {
@@ -27,37 +28,32 @@ export default function AdminFooter () {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              <IntlMessages id="AKAWEB"/>
             </span>
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
-            </p>
-            <p className="mt-4 text-sm text-gray-800">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
+              <IntlMessages id="about-us-footer"/>
             </p>
           </div>
         </div>
         <div className="space-y-2 text-sm">
           <p className="text-base font-bold tracking-wide text-gray-900">
-            Contacts
+            <IntlMessages id="contactUs"/>
           </p>
           <div className="flex">
-            <p className="mr-1 text-gray-800">Phone:</p>
+            <p className="mr-1 text-gray-800"><IntlMessages id="telephone-footer"/></p>
             <a
-              href="tel:850-123-5021"
+              href="tel:09017026364"
               aria-label="Our phone"
               title="Our phone"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              850-123-5021
+               09017026364 
             </a>
           </div>
           <div className="flex">
-            <p className="mr-1 text-gray-800">Email:</p>
+            <p className="mr-1 text-gray-800"><IntlMessages id="email-footer"/></p>
             <a
               href="mailto:info@lorem.mail"
               aria-label="Our email"
@@ -68,7 +64,7 @@ export default function AdminFooter () {
             </a>
           </div>
           <div className="flex">
-            <p className="mr-1 text-gray-800">Address:</p>
+            <p className="mr-1 text-gray-800"><IntlMessages id="address-footer"/></p>
             <a
               href="https://www.google.com/maps"
               target="_blank"
@@ -77,13 +73,13 @@ export default function AdminFooter () {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              312 Lovely Street, NY
+              Esfahan
             </a>
           </div>
         </div>
         <div>
           <span className="text-base font-bold tracking-wide text-gray-900">
-            Social
+            <IntlMessages id="social-footer"/>
           </span>
           <div className="flex items-center mt-1 space-x-3">
             <a
@@ -113,41 +109,14 @@ export default function AdminFooter () {
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+            <IntlMessages id="about-us-footer-2"/>
           </p>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2025 Omid Mokhtari. All rights reserved.
+         <IntlMessages id="all-right-footer"/>
         </p>
-        <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-          <li>
-            <a
-              href="/"
-              className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-            >
-              F.A.Q
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-            >
-              Terms &amp; Conditions
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );
