@@ -96,10 +96,10 @@ export default function AdminHeader() {
             }}
           >
             <Button color="primary" variant="text" size="small">
-              <IntlMessages id="signIn"/>
+              <IntlMessages id="signIn" />
             </Button>
             <Button color="primary" variant="contained" size="small">
-              <IntlMessages id="signUp"/>
+              <IntlMessages id="signUp" />
             </Button>
             {/* <ColorModeIconDropdown /> */}
           </Box>
@@ -130,21 +130,36 @@ export default function AdminHeader() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem>
+                  <IntlMessages id="home" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="Portfolio" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="websiteDesign" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="onlineStoreDesign" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="employment" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="aboutUs" />
+                </MenuItem>
+                <MenuItem>
+                  <IntlMessages id="contactUs" />
+                </MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
-                    Sign up
+                    <IntlMessages id="signUp" />
                   </Button>
                 </MenuItem>
                 <MenuItem>
                   <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
+                    <IntlMessages id="signIn" />
                   </Button>
                 </MenuItem>
               </Box>
