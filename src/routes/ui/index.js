@@ -1,13 +1,12 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 import UiComponents from "./components";
 
 const UI = () => {
-    return ( <>
-        <Routes>
-            <Route index element={<UiComponents/>} />
-        </Routes>
-    </> );
-}
- 
+  return (
+    <>
+      <UiComponents />
+    </>
+  );
+};
+
 export default UI;

@@ -1,14 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { IntlProvider } from "react-intl";
-import CssBaseline from "@mui/material/CssBaseline";
 import AppLocale from "./lang";
 import UI from "./routes/ui";
 import User from "./routes/user";
 import Login from "./routes/user/login";
 import Register from "./routes/user/register";
+import Buttons from "./routes/ui/components/Buttons";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+import Alerts from "./routes/ui/components/Alerts";
+import Badges from "./routes/ui/components/Badges";
+import Cards from "./routes/ui/components/Cards";
+import Drawer from "./routes/ui/components/Drawer";
+import Modal from "./routes/ui/components/Modal";
+import AdminLayout from "./layout/admin";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -39,25 +46,35 @@ const currentAppLocale = AppLocale[lang];
 
 export default function App() {
   return (
-    <div className={lang === "fa" ? "fontRtl" : ""}>
+    <div className={lang === "fa" ? "fontRtl rtl" : "ltr"}>
       <IntlProvider
         locale={currentAppLocale.locale}
         messages={currentAppLocale.messages}
       >
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <BrowserRouter>
+          <Router>
             <Routes>
-              <Route index element={<Home />} />
-              <Route path="blogs" exact element={<Blogs />} />
-              <Route path="Ui" exact element={<UI />} />
-              <Route path="user" element={<User />}>
-                <Route index element={<Login />} />
-                <Route path="register" element={<Register />} />
+              <Route path="/" element={<AdminLayout />}>
+                <Route index element={<Home />} />
+                <Route path="blogs"  element={<Blogs />} />
+                <Route path="Ui"  element={<UI />}>
+                  <Route index  element={<Buttons />} />
+                  <Route path="buttons"  element={<Buttons />} />
+                  <Route path="alerts"  element={<Alerts />} />
+                  <Route path="badges"  element={<Badges />} />
+                  <Route path="cards"  element={<Cards />} />
+                  <Route path="drawer"  element={<Drawer />} />
+                  <Route path="modals"  element={<Modal />} />
+                </Route>
+                <Route path="user" element={<User />}>
+                  <Route index element={<Login />} />
+                  <Route path="register" element={<Register />} />
+                </Route>
+                <Route path="*" element={<NoPage />} />
               </Route>
-              <Route path="*" element={<NoPage />} />
             </Routes>
-          </BrowserRouter>
+          </Router>
         </ThemeProvider>
       </IntlProvider>
     </div>

@@ -1,9 +1,13 @@
 import React from "react";
+import CustomerFooter from "./footer";
+import CustomerHeader from "./header";
 
-const CustomerLayout = () => {
+const CustomerLayout = ({children}) => {
   return (
     <>
-      <h1>CustomerLayout</h1>
+      <CustomerHeader/>
+      {children}
+      <CustomerFooter/>
     </>
   );
 };
