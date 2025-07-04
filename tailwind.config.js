@@ -1,3 +1,5 @@
+const { colors } = require('./src/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,11 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        // Using CSS variables
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)'
-      }
+      // colors: {
+      //   // Using CSS variables
+      //   primary: "#000" ,// 'var(--color-primary)',
+      //   secondary: 'var(--color-secondary)'
+      // }
+      colors : colors
     }
   },
   plugins: [],

@@ -12,7 +12,7 @@ import User from "./routes/user";
 import Login from "./routes/user/login";
 import Register from "./routes/user/register";
 import Buttons from "./routes/ui/components/Buttons";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import Alerts from "./routes/ui/components/Alerts";
 import Badges from "./routes/ui/components/Badges";
@@ -27,6 +27,7 @@ import Portfolio from "./routes/portfolio/portfolio";
 import AboutUs from "./routes/aboutus/AboutUs";
 import Employment from "./routes/employment/Employment";
 import ContactUs from "./routes/contactus/ContactUs";
+import getTheme, { colors } from "./theme";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -36,27 +37,9 @@ const lang = "fa";
 const currentAppLocale = AppLocale[lang];
 
 //-- costomize palette color -- &&&&-- dark theme ---------- MUI
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: "#757ce8",
-      main: "#3f50b5",
-      dark: "#002884",
-      contrastText: "#fff",
-    },
-    secondary: {
-      light: "#ff7961",
-      main: "#f44336",
-      dark: "#ba000d",
-      contrastText: "#000",
-    },
-    mode: "light",
-  },
-  direction: lang === "fa" ? "rtl" : "ltr",
-  typography: {
-    fontFamily: 'IRANYekan, Arial, sans-serif', // Font you want to use
-  },
-});
+const theme = getTheme(lang)
+console.log(theme);
+console.log(colors());
 
 // -----------  RTL   &     LTR   ---------------
 const cacheLtr = createCache({
