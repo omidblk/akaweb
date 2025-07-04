@@ -1,11 +1,12 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-
 
 const User = () => {
   return (
     <>
-    <Outlet />
+    <div className="text-center mt-4">
+      user page
+    </div>
+    <Outlet/>
     </>
   );
 };

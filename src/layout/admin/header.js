@@ -1,5 +1,6 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
+import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,7 +8,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import MenuItem from "@mui/material/MenuItem";
+// import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
@@ -46,7 +47,7 @@ export default function AdminHeader() {
         boxShadow: 0,
         bgcolor: "transparent",
         backgroundImage: "none",
-        mt: "calc(var(--template-frame-height, 0px) + 28px)",
+        mt: "calc(var(--template-frame-height, 0px) + 25px)",
       }}
     >
       <Container maxWidth="lg">
@@ -60,12 +61,16 @@ export default function AdminHeader() {
               sx={{ display: { xs: "none", md: "flex" } }}
               className="md:gap-2"
             >
-              <Button variant="text" color="primary" size="small">
-                <IntlMessages id="home" />
-              </Button>
-              <Button variant="text" color="primary" size="small">
-                <IntlMessages id="Portfolio" />
-              </Button>
+              <NavLink to="/">
+                <Button variant="text" color="primary" size="small">
+                  <IntlMessages id="home" />
+                </Button>
+              </NavLink>
+              <NavLink to="portfolio">
+                <Button variant="text" color="primary" size="small">
+                  <IntlMessages id="Portfolio" />
+                </Button>
+              </NavLink>
               <Button variant="text" color="primary" size="small">
                 <IntlMessages id="websiteDesign" />
               </Button>
@@ -77,15 +82,21 @@ export default function AdminHeader() {
               >
                 <IntlMessages id="onlineStoreDesign" />
               </Button>
-              <Button variant="text" color="primary" size="small">
-                <IntlMessages id="employment" />
-              </Button>
-              <Button variant="text" color="primary" size="small">
-                <IntlMessages id="aboutUs" />
-              </Button>
-              <Button variant="text" color="primary" size="small">
-                <IntlMessages id="contactUs" />
-              </Button>
+              <NavLink to="employment">
+                <Button variant="text" color="primary" size="small">
+                  <IntlMessages id="employment" />
+                </Button>
+              </NavLink>
+              <NavLink to="aboutus">
+                <Button variant="text" color="primary" size="small">
+                  <IntlMessages id="aboutUs" />
+                </Button>
+              </NavLink>
+              <NavLink to="contactus">
+                <Button variant="text" color="primary" size="small">
+                  <IntlMessages id="contactUs" />
+                </Button>
+              </NavLink>
             </Box>
           </Box>
           <Box
@@ -95,12 +106,16 @@ export default function AdminHeader() {
               alignItems: "center",
             }}
           >
-            <Button color="primary" variant="text" size="small">
-              <IntlMessages id="signIn" />
-            </Button>
-            <Button color="primary" variant="contained" size="small">
-              <IntlMessages id="signUp" />
-            </Button>
+            <NavLink to="user/login">
+              <Button color="primary" variant="text" size="small">
+                <IntlMessages id="signIn" />
+              </Button>
+            </NavLink>
+            <NavLink to="user/register">
+              <Button color="primary" variant="contained" size="small">
+                <IntlMessages id="signUp" />
+              </Button>
+            </NavLink>
             {/* <ColorModeIconDropdown /> */}
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
@@ -130,38 +145,38 @@ export default function AdminHeader() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>
+                <NavLink to="/">
                   <IntlMessages id="home" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="portfolio">
                   <IntlMessages id="Portfolio" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="websiteDesign">
                   <IntlMessages id="websiteDesign" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="onlineStoreDesign">
                   <IntlMessages id="onlineStoreDesign" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="employment">
                   <IntlMessages id="employment" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="aboutus">
                   <IntlMessages id="aboutUs" />
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="contactus">
                   <IntlMessages id="contactUs" />
-                </MenuItem>
+                </NavLink>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>
+                <NavLink>
                   <Button color="primary" variant="contained" fullWidth>
                     <IntlMessages id="signUp" />
                   </Button>
-                </MenuItem>
-                <MenuItem>
+                </NavLink>
+                <NavLink to="/user/login">
                   <Button color="primary" variant="outlined" fullWidth>
                     <IntlMessages id="signIn" />
                   </Button>
-                </MenuItem>
+                </NavLink>
               </Box>
             </Drawer>
           </Box>

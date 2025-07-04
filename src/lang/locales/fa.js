@@ -9,7 +9,6 @@ module.exports ={
     "websiteDesign" : "طراحی وبسایت",
     "onlineStoreDesign" : "طراحی فروشگاه اینترنتی",
     "aboutUs":"درباره ما",
-    "contactUs":"تماس با ما",
     "signIn":"ورود",
     "signUp":"ثبت نام",
     // Footer -------------------------------
@@ -20,4 +19,17 @@ module.exports ={
     "email-footer":"ایمیل : ",
     "address-footer":"آدرس : ",
     "social-footer":"فضای مجازی : ",
+    // -------------    login     --------------
+    "login-title" : "ورود",
+    "login-email" : "ایمیل",
+    "login-password" : "رمزعبور",
+    // --------------   register   --------------
+    "register-title" : "ثبت نام",
+    "register-firstName" : "نام",
+    "register-lastName" : "نام خانوادگی",
+    "register-ٍemail" : "ایمیل",
+    "register-password" : "رمزعبور",
+    "register-passwordConfirm" : "تکرار رمزعبور",
+    // ---------------  Contact us   ---------------
+    "contactUs":"تماس با ما",
 }
