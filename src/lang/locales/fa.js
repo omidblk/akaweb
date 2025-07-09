@@ -32,4 +32,25 @@ module.exports ={
     "register-passwordConfirm" : "تکرار رمزعبور",
     // ---------------  Contact us   ---------------
     "contactUs":"تماس با ما",
+    "contactus-phonenumber":"شماره تماس",
+    "contactus-emailcompany":"ایمیل شرکت",
+    "contactus-addresscompany-title":"آدرس",
+    "contactus-addresscompany":"اصفهان",
+    "contactus-company-location-title":"موقعیت شرکت",
+    "contactus-form-name-label":"نام",
+    "contactus-form-email-label":"ایمیل",
+    "contactus-form-subject-label":"موضوع",
+    "contactus-form-message-label":"متن پیام",
+    "contactus-form-send-label":"ارسال پیام",
+    // -----------------    Employment   ----------------
+    "employment-work-with-the-Bests":"در تیم برنده ها بازی کنید.",
+    "employment-send-resume":"همین حالا رزومه خود را ارسال کنید",
+    "employment-form":"فرم استخدام",
+    "employment-form-firstname":"نام",
+    "employment-form-lastname":"نام خانوادگی",
+    "employment-form-age":"سن",
+    "employment-form-email":"ایمیل",
+    "employment-form-send":"ارسال فرم",
+    
+    
 }

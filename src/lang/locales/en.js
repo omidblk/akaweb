@@ -9,7 +9,6 @@ module.exports ={
     "websiteDesign" : "Website design",
     "onlineStoreDesign" : "Online store design",
     "aboutUs":"About Us",
-    "contactUs":"Contact Us",
     "signIn":"Sign in",
     "signUp":"Sign up",
     // Footer -------------------------------
@@ -20,5 +19,31 @@ module.exports ={
     "email-footer":"Email : ",
     "address-footer":"Address : ",
     "social-footer":"Social : ",
-
+    // -------------    login     --------------
+    "login-title" : "Login",
+    "login-email" : "Email",
+    "login-password" : "Password",
+    // --------------   register   --------------
+    "register-title" : "Register",
+    "register-firstName" : "Name",
+    "register-lastName" : "Last name",
+    "register-ٍemail" : "Email",
+    "register-password" : "Password",
+    "register-passwordConfirm" : "Password confirm",
+    // ---------------  Contact us   ---------------
+    "contactUs":"Contact Us",
+    "contactus-phonenumber":"Phone number",
+    "contactus-emailcompany":"Email",
+    "contactus-addresscompany-title":"Address",
+    "contactus-addresscompany":"Esfahan",
+    "contactus-company-location-title":"Company location",
+    // -----------------    Employment   ----------------
+    "employment-work-with-the-Bests":"work with the bests",
+    "employment-send-resume":"Now send your resume",
+    "employment-form":"employment request",
+    "employment-form-firstname":"Firstname",
+    "employment-form-lastname":"Lastname",
+    "employment-form-age":"Age",
+    "employment-form-email":"Email",
+    "employment-form-send":"Send request",
 }

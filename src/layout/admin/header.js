@@ -87,11 +87,11 @@ export default function AdminHeader() {
                   <IntlMessages id="employment" />
                 </Button>
               </NavLink>
-              <NavLink to="aboutus">
+              {/* <NavLink  to="aboutus">
                 <Button variant="text" color="primary" size="small">
                   <IntlMessages id="aboutUs" />
                 </Button>
-              </NavLink>
+              </NavLink> */}
               <NavLink to="contactus">
                 <Button variant="text" color="primary" size="small">
                   <IntlMessages id="contactUs" />
@@ -145,7 +145,8 @@ export default function AdminHeader() {
                   </IconButton>
                 </Box>
 
-                <NavLink to="/">
+                <div className="flex flex-col gap-6">
+                  <NavLink to="/">
                   <IntlMessages id="home" />
                 </NavLink>
                 <NavLink to="portfolio">
@@ -160,12 +161,13 @@ export default function AdminHeader() {
                 <NavLink to="employment">
                   <IntlMessages id="employment" />
                 </NavLink>
-                <NavLink to="aboutus">
+                {/* <NavLink to="aboutus">
                   <IntlMessages id="aboutUs" />
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="contactus">
                   <IntlMessages id="contactUs" />
                 </NavLink>
+                </div>
                 <Divider sx={{ my: 3 }} />
                 <NavLink>
                   <Button color="primary" variant="contained" fullWidth>

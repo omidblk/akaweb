@@ -27,7 +27,7 @@ import Portfolio from "./routes/portfolio/portfolio";
 import AboutUs from "./routes/aboutus/AboutUs";
 import Employment from "./routes/employment/Employment";
 import ContactUs from "./routes/contactus/ContactUs";
-import getTheme, { colors } from "./theme";
+import getTheme from "./theme";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -38,8 +38,8 @@ const currentAppLocale = AppLocale[lang];
 
 //-- costomize palette color -- &&&&-- dark theme ---------- MUI
 const theme = getTheme(lang)
-console.log(theme);
-console.log(colors());
+// console.log(theme);
+// console.log(colors());
 
 // -----------  RTL   &     LTR   ---------------
 const cacheLtr = createCache({
