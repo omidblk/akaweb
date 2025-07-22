@@ -41,7 +41,7 @@ const Register = () => {
             <IntlMessages id="register-title" />
           </h1> */}
           <div className="flex justify-between">
-            <img className="w-1/2" src="/userImages/login.png" alt="login" />
+            <img className="w-1/2" src="/userImages/signUp.png" alt="login" />
             <form onSubmit={formik.handleSubmit} className="w-1/2 flex flex-col gap-8 justify-center">
               <TextField
                 id="fName"

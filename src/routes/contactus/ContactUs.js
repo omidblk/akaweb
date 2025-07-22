@@ -30,7 +30,7 @@ const ContactUs = () => {
     },
   });
   return (
-    <div>
+    <div className="">
       <Container maxWidth="lg">
         {/* ---------  title  ---------- */}
         <div>

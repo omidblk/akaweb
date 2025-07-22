@@ -20,6 +20,7 @@ import Cards from "./routes/ui/components/Cards";
 import Drawer from "./routes/ui/components/Drawer";
 import Modal from "./routes/ui/components/Modal";
 import AdminLayout from "./layout/admin";
+import CustomerLayout from "./layout/customer";
 import Inputs from "./routes/ui/components/Inputs";
 import LoginFormik from "./routes/user/loginformik";
 import LoginFormik2 from "./routes/user/loginformik copy";
@@ -70,7 +71,7 @@ export default function App() {
             <CssBaseline />
             <Router>
               <Routes>
-                <Route path="/" element={<AdminLayout />}>
+                <Route path="/" element={<CustomerLayout />}>
                   <Route index element={<Home />} />
                   <Route path="blogs" element={<Blogs />} />
                   <Route path="Ui" element={<UI />}>
@@ -95,6 +96,9 @@ export default function App() {
                   <Route path="/aboutus" element={<AboutUs/>}/>
                   <Route path="/contactus" element={<ContactUs/>}/>
                   <Route path="*" element={<NoPage />} />
+                </Route>
+                <Route path="/blk" element={<AdminLayout />}>
+
                 </Route>
               </Routes>
             </Router>
