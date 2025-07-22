@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+#  AKAweb  
+
+## A Modern, Responsive Web Project with Tailwind CSS & MUI
+## Features
+
+### Responsive Design – Works flawlessly on all devices (mobile, tablet, desktop).
+### Customizable Themes – Easily modify colors, fonts, and styles to fit your brand.
+### Powered by Tailwind CSS – Utility-first CSS for rapid and flexible styling.
+### Material-UI (MUI) Integration – Pre-built, accessible React components for a sleek UI.
+
+## Technologies Used
+Frontend: React.js
+Styling: Tailwind CSS + Material-UI (MUI)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,4 +83,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# akaweb" 
+ 
