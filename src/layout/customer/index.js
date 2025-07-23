@@ -5,7 +5,6 @@ import { Outlet, useLocation } from "react-router-dom";
 
 const CustomerLayout = () => {
   const location = useLocation()
-   console.log(location?.pathname); 
   return (
     <>
       <CustomerHeader />
