@@ -1,4 +1,5 @@
 import { Box, TextField } from "@mui/material";
+import EnhancedInput from "./EnhancedInput"
 
 const Inputs = () => {
   return (
@@ -13,6 +14,15 @@ const Inputs = () => {
         <TextField id="outlined-basic" label="Outlined" variant="outlined" />
         <TextField id="filled-basic" label="Filled" variant="filled" />
         <TextField id="standard-basic" label="Standard" variant="standard" />
+      </Box>
+      <Box
+        component="form"
+        sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+        noValidate
+        autoComplete="off"
+      >
+      <EnhancedInput label="label" showPasswordToggle/>
+      <EnhancedInput label="فارسی" showPasswordToggle/>
       </Box>
     </div>
   );

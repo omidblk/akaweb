@@ -9,6 +9,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AlarmIcon from "@mui/icons-material/Alarm";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { IconButton } from "@mui/material";
+import EnhancedButton from "./EnhancedButton";
 
 export default function LoadingButtonsTransition() {
   const [loading, setLoading] = React.useState(true);
@@ -23,6 +24,14 @@ export default function LoadingButtonsTransition() {
         <Button variant="text">Text</Button>
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button>
+      </Box>
+      {/* EnhancedButton */}
+      <Box className="flex justify-center" sx={{ "& button": { m: 1 } }}>
+        <EnhancedButton loading />
+        <EnhancedButton >Button</EnhancedButton>
+        <EnhancedButton variant="outlined">Button</EnhancedButton>
+        <EnhancedButton color="warning">Button</EnhancedButton>
+        <EnhancedButton color="secondary" className="text-white">Button</EnhancedButton>
       </Box>
       {/* Text Buttons */}
       <Box className="flex justify-center" sx={{ "& button": { m: 1 } }}>

@@ -29,6 +29,7 @@ import AboutUs from "./routes/aboutus/AboutUs";
 import Employment from "./routes/employment/Employment";
 import ContactUs from "./routes/contactus/ContactUs";
 import getTheme from "./theme";
+import Table from "./routes/ui/components/Table";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -83,6 +84,7 @@ export default function App() {
                     <Route path="drawer" element={<Drawer />} />
                     <Route path="modals" element={<Modal />} />
                     <Route path="inputs" element={<Inputs />} />
+                    <Route path="table" element={<Table />} />
                   </Route>
                   <Route path="user" element={<User />}>
                     <Route index element={<User />} />

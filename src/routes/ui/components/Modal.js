@@ -1,37 +1,107 @@
 import { useState } from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
+import Modal from "@mui/material/Modal";
 import { useTheme } from "@mui/material/styles";
-
-
+import { Box, Typography, Alert } from "@mui/material";
+import { Warning } from "@mui/icons-material";
+import AdvancedModal from "./AdvancedModal";
+import { EnhancedButton as Button } from "./EnhancedButton";
 
 const ModalView = () => {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-//   theme   
-const theme = useTheme()
+  // advanced modal conformation
+  const confirmationText = "آیا از انجام این عمل اطمینان دارید؟";
+  const confirmButtonText = "تأیید";
+  const cancelButtonText = "انصراف";
+  const variant = "warning";
+  const message = "message";
+  const loading = false;
+  const severity = "warning";
+  const [openAdvanced, setOpenadvanced] = useState(false);
+  const handleOpenAdvanced = () => setOpenadvanced(true);
+  const handleCloseAdvanced = () => setOpenadvanced(false);
+  const handleConfirm = () => console.log("confirmed");
+
+  //   theme
+  const theme = useTheme();
   return (
     <div className="flex flex-col items-center gap-8 bg">
       <h1 className="text-center">Modal</h1>
-      <div>
-        <Button variant="contained" onClick={handleOpen}>Open modal</Button>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box className="modal-style" sx={{ borderColor: theme.palette.primary.main }}>
-            <p>
-              Tempor ut nostrud anim minim. Ullamco est sunt duis fugiat officia
-              consequat amet fugiat id minim tempor velit sunt. Laborum velit do
-              nulla cupidatat aliquip ullamco qui.
-            </p>
-          </Box>
-        </Modal>
+      <div className="flex flex-col gap-2">
+        <Button variant="contained" onClick={handleOpen}>
+          Open modal
+        </Button>
+
+        {/* AdvancedModal  -----  Confirmation Modal */}
+        <Button className="" variant="contained" onClick={handleOpenAdvanced}>
+          Open advanced modal
+        </Button>
       </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          className="modal-style"
+          sx={{ borderColor: theme.palette.primary.main }}
+        >
+          <p>
+            Tempor ut nostrud anim minim. Ullamco est sunt duis fugiat officia
+            consequat amet fugiat id minim tempor velit sunt. Laborum velit do
+            nulla cupidatat aliquip ullamco qui.
+          </p>
+        </Box>
+      </Modal>
+
+      <AdvancedModal
+        open={openAdvanced}
+        onClose={handleCloseAdvanced}
+        title={"تأیید عمل"}
+        variant={variant}
+        size="small"
+        actions={
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <Button
+              variant="outlined"
+              onClick={handleCloseAdvanced}
+              disabled={loading}
+            >
+              {cancelButtonText}
+            </Button>
+            <Button
+              variant="contained"
+              color={variant === "error" ? "error" : "primary"}
+              onClick={handleConfirm}
+              loading={loading}
+            >
+              {confirmButtonText}
+            </Button>
+          </Box>
+        }
+      >
+        <Box sx={{ textAlign: "center", py: 2 }}>
+          <Warning
+            sx={{
+              fontSize: 48,
+              color: `${variant}.main`,
+              mb: 2,
+            }}
+          />
+
+          <Typography variant="h6" gutterBottom>
+            {confirmationText}
+          </Typography>
+
+          {message && (
+            <Alert severity={severity} sx={{ mt: 2, textAlign: "right" }}>
+              {message}
+            </Alert>
+          )}
+        </Box>
+      </AdvancedModal>
     </div>
   );
 };
