@@ -11,6 +11,7 @@ module.exports ={
     "aboutUs":"درباره ما",
     "signIn":"ورود",
     "signUp":"ثبت نام",
+    "loading":"در حال پردازش ...",
     // Footer -------------------------------
     "about-us-footer" : "آکاوب با بهره‌گیری از دانش و تخصص تیم حرفه‌ای خود، توانسته است مجموعه بسیاری از سایت‌های شرکتی را در صنایع مختلف طراحی و پیاده‌سازی کند.",
     "about-us-footer-2" : "آکاوب به شما کمک می‌کند تا هویتی قوی و آنلاین برای کسب‌وکار خود ایجاد کنید.",
@@ -51,6 +52,16 @@ module.exports ={
     "employment-form-age":"سن",
     "employment-form-email":"ایمیل",
     "employment-form-send":"ارسال فرم",
+
+
+    // -----------------    MODAL    --------------------
+    "modal-confirmation-text":"آیا از انجام این عمل اطمینان دارید؟",
+    "modal-confirm-button-text":"تأیید",
+    "modal-cancel-button-text":"انصراف",
+    "modal-title":"عنوان",
+    "modal-alertMessage":"متن پیام",
     
+    // ------------------  Table     -----------------------
+    "table-row-in-page":"ردیف در صفحه",
     
 }

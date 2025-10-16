@@ -1,6 +1,7 @@
 // src/components/ui/EnhancedButton.jsx
 import React from 'react';
 import { Button as MuiButton, CircularProgress } from '@mui/material';
+import IntlMessages from '../../../lang/components/IntlMessages';
 
 const EnhancedButton = ({ 
   children, 
@@ -27,7 +28,7 @@ const EnhancedButton = ({
         ...props.sx
       }}
     >
-      {loading ? 'در حال پردازش...' : children}
+      {loading ? <span className='ml-2'><IntlMessages id="loading"/></span> : children}
     </MuiButton>
   );
 };

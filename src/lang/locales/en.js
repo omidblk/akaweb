@@ -11,6 +11,7 @@ module.exports ={
     "aboutUs":"About Us",
     "signIn":"Sign in",
     "signUp":"Sign up",
+    "loading":"Loading...",
     // Footer -------------------------------
     "about-us-footer" : "Using the knowledge and expertise of its professional team, Akaweb has been able to design and implement many corporate websites in various industries",
     "about-us-footer-2" : "Akaweb helps you create a strong online identity for your business",
@@ -46,4 +47,15 @@ module.exports ={
     "employment-form-age":"Age",
     "employment-form-email":"Email",
     "employment-form-send":"Send request",
+
+    // -----------------    MODAL    --------------------
+    "modal-confirmation-text":"ConfirmationText",
+    "modal-confirm-button-text":"Confirm",
+    "modal-cancel-button-text":"Cancel",
+    "modal-title":"Title",
+    "modal-alertMessage":"Alert message",
+    
+    // ------------------  Table     -----------------------
+    "table-row-in-page":"Row in page",
+    
 }

@@ -5,17 +5,18 @@ import { Box, Typography, Alert } from "@mui/material";
 import { Warning } from "@mui/icons-material";
 import AdvancedModal from "./AdvancedModal";
 import { EnhancedButton as Button } from "./EnhancedButton";
+import IntlMessages from "../../../lang/components/IntlMessages";
+import { useIntl } from 'react-intl';
 
 const ModalView = () => {
+  const Intl = useIntl()
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   // advanced modal conformation
-  const confirmationText = "آیا از انجام این عمل اطمینان دارید؟";
-  const confirmButtonText = "تأیید";
-  const cancelButtonText = "انصراف";
-  const variant = "warning";
-  const message = "message";
+ 
+  const variant = "error"; //success , warning , info , primary , secondary
+  const AlertMessage = "message";
   const loading = false;
   const severity = "warning";
   const [openAdvanced, setOpenadvanced] = useState(false);
@@ -59,9 +60,9 @@ const ModalView = () => {
       <AdvancedModal
         open={openAdvanced}
         onClose={handleCloseAdvanced}
-        title={"تأیید عمل"}
+        title={Intl.formatMessage({ id: 'modal-title' })}
         variant={variant}
-        size="small"
+        size="large" // small , large , xlarge
         actions={
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button
@@ -69,7 +70,8 @@ const ModalView = () => {
               onClick={handleCloseAdvanced}
               disabled={loading}
             >
-              {cancelButtonText}
+              
+               <IntlMessages id={"modal-cancel-button-text"} />
             </Button>
             <Button
               variant="contained"
@@ -77,27 +79,33 @@ const ModalView = () => {
               onClick={handleConfirm}
               loading={loading}
             >
-              {confirmButtonText}
+              
+              <IntlMessages id={"modal-confirm-button-text"} />
             </Button>
           </Box>
         }
       >
         <Box sx={{ textAlign: "center", py: 2 }}>
-          <Warning
+          
+          {["warning","error"].includes(variant)  && (
+            <Warning
             sx={{
               fontSize: 48,
               color: `${variant}.main`,
               mb: 2,
             }}
           />
+          )}
 
           <Typography variant="h6" gutterBottom>
-            {confirmationText}
+            
+            <IntlMessages id={"modal-confirmation-text"}/>
           </Typography>
 
-          {message && (
+          {/* ------   ALERT    -------- */}
+          {AlertMessage && (
             <Alert severity={severity} sx={{ mt: 2, textAlign: "right" }}>
-              {message}
+              <IntlMessages id={"modal-alertMessage"}/>
             </Alert>
           )}
         </Box>

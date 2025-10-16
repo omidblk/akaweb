@@ -12,6 +12,7 @@ import {
   TableSortLabel,
   Checkbox
 } from '@mui/material';
+import { useIntl } from 'react-intl';
 
 const DataTable = ({
   columns,
@@ -27,6 +28,7 @@ const DataTable = ({
   onSelectRow,
   onSelectAllRows
 }) => {
+  const Intl = useIntl()
   const [orderBy, setOrderBy] = useState('');
   const [order, setOrder] = useState('asc');
 
@@ -118,7 +120,7 @@ const DataTable = ({
         page={page}
         onPageChange={onPageChange}
         onRowsPerPageChange={onRowsPerPageChange}
-        labelRowsPerPage="ردیف در صفحه:"
+        labelRowsPerPage={Intl.formatMessage({id:"table-row-in-page"})}
         labelDisplayedRows={({ from, to, count }) => 
           `${from}-${to} از ${count !== -1 ? count : `more than ${to}`}`
         }

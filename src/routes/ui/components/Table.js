@@ -84,6 +84,7 @@ const Table = () => {
   const handleSort = (field, direction) => {
     console.log("Sorting by:", field, direction);
     // در اینجا می‌توانید منطق سورت کردن را پیاده‌سازی کنید
+    // here can sort data 
   };
 
   const handleSelectRow = (id, isSelected) => {
@@ -107,7 +108,6 @@ const Table = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2>مدیریت کاربران</h2>
       <DataTable
         columns={columns}
         data={paginatedData}
