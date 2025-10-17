@@ -1,5 +1,4 @@
-// src/pages/Dashboard/DashboardPage.jsx (نسخه اصلاح شده)
-import React from "react";
+
 import {
   Box,
   Typography,
@@ -19,7 +18,7 @@ const DashboardPage = () => {
       color: "primary.main",
       progress: 75,
     },
-    {
+    { 
       title: "حضور امروز",
       value: "۸۹",
       icon: <Schedule />,
@@ -146,6 +145,20 @@ const DashboardPage = () => {
       </Box>
 
       {/* Recent Employees Table */}
+      <Card sx={{ borderRadius: 3, boxShadow: 2 }}>
+        <CardContent>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+            کارمندان recently added
+          </Typography>
+          <DataTable
+            columns={columns}
+            data={recentEmployees}
+            totalCount={recentEmployees.length}
+            page={0}
+            rowsPerPage={5}
+          />
+        </CardContent>
+      </Card>
       <Card sx={{ borderRadius: 3, boxShadow: 2 }}>
         <CardContent>
           <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
