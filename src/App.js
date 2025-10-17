@@ -30,6 +30,8 @@ import Employment from "./routes/employment/Employment";
 import ContactUs from "./routes/contactus/ContactUs";
 import getTheme from "./theme";
 import Table from "./routes/ui/components/Table";
+import EnhancedLayout from "./layout/enhancedLayout/EnhancedLayout";
+import DashboardPage from "./pages/Dashboard/Dashboard";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -100,7 +102,10 @@ export default function App() {
                   <Route path="*" element={<NoPage />} />
                 </Route>
                 <Route path="/blk" element={<AdminLayout />}>
-
+                </Route>
+                <Route path="/enhanced" element={< EnhancedLayout/>}>
+                <Route index element={<DashboardPage />} />
+                <Route path="dashboard" element={<DashboardPage />} />
                 </Route>
               </Routes>
             </Router>
