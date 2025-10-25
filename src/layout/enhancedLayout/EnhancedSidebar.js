@@ -6,6 +6,8 @@ export const EnhancedSidebar = ({
   drawerWidth,
   mobileOpen,
   setMobileOpen,
+  setDrawerOpen,
+  drawerOpen
 }) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -30,13 +32,13 @@ export const EnhancedSidebar = ({
         variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
-        ModalProps={{ 
+        ModalProps={{
           keepMounted: true,
           BackdropProps: {
             sx: {
               backgroundColor: "transparent",
-            }
-          }
+            },
+          },
         }}
         sx={{
           display: { xs: "block", md: "none" },
@@ -45,7 +47,7 @@ export const EnhancedSidebar = ({
       >
         <MainSidebar onItemClick={onItemClick} />
       </Drawer>
-      
+
       {/* دراور دائمی برای دسکتاپ */}
       <Drawer
         variant="permanent"
@@ -55,7 +57,7 @@ export const EnhancedSidebar = ({
         }}
         open
       >
-        <MainSidebar onItemClick={onItemClick} />
+        <MainSidebar onItemClick={onItemClick} setDrawerOpen={setDrawerOpen} drawerOpen={drawerOpen} />
       </Drawer>
     </>
   );
