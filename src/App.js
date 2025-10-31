@@ -32,6 +32,7 @@ import getTheme from "./theme";
 import Table from "./routes/ui/components/Table";
 import EnhancedLayout from "./layout/enhancedLayout/EnhancedLayout";
 import DashboardPage from "./pages/Dashboard/Dashboard";
+import EmployeesPage from "./pages/Employees/EmployeesPage";
 const Home = React.lazy(() => import("./routes/home"));
 const Blogs = React.lazy(() => import("./pages/blogs"));
 const NoPage = React.lazy(() => import("./routes/NoPage"));
@@ -77,17 +78,7 @@ export default function App() {
                 <Route path="/blk2" element={<CustomerLayout />}>
                   <Route index element={<Home />} />
                   <Route path="blogs" element={<Blogs />} />
-                  <Route path="Ui" element={<UI />}>
-                    <Route index element={<Buttons />} />
-                    <Route path="buttons" element={<Buttons />} />
-                    <Route path="alerts" element={<Alerts />} />
-                    <Route path="badges" element={<Badges />} />
-                    <Route path="cards" element={<Cards />} />
-                    <Route path="drawer" element={<Drawer />} />
-                    <Route path="modals" element={<Modal />} />
-                    <Route path="inputs" element={<Inputs />} />
-                    <Route path="table" element={<Table />} />
-                  </Route>
+                  
                   <Route path="user" element={<User />}>
                     <Route index element={<User />} />
                     <Route path="login" element={<Login />} />
@@ -106,6 +97,18 @@ export default function App() {
                 <Route path="/" element={< EnhancedLayout/>}>
                 <Route index element={<DashboardPage />} />
                 <Route path="dashboard" element={<DashboardPage />} />
+                <Route path="employees" element={<EmployeesPage />} />
+                <Route path="Ui" element={<UI />}>
+                    <Route index element={<Buttons />} />
+                    <Route path="buttons" element={<Buttons />} />
+                    <Route path="alerts" element={<Alerts />} />
+                    <Route path="badges" element={<Badges />} />
+                    <Route path="cards" element={<Cards />} />
+                    <Route path="drawer" element={<Drawer />} />
+                    <Route path="modals" element={<Modal />} />
+                    <Route path="inputs" element={<Inputs />} />
+                    <Route path="table" element={<Table />} />
+                  </Route>
                 </Route>
               </Routes>
             </Router>
