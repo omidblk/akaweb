@@ -45,7 +45,7 @@ export const EnhancedSidebar = ({
           "& .MuiDrawer-paper": drawerPaperStyles,
         }}
       >
-        <MainSidebar onItemClick={onItemClick} />
+        <MainSidebar onItemClick={onItemClick} setDrawerOpen={setDrawerOpen} drawerOpen={drawerOpen}/>
       </Drawer>
 
       {/* دراور دائمی برای دسکتاپ */}

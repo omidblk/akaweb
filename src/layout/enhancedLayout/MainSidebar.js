@@ -84,7 +84,7 @@ export const MainSidebar = ({
         <button
           className={`p-2 rounded-full bg-slate-100 ${
             !drawerOpen ? "mr-auto" : ""
-          } `}
+          } xs:hidden`}
           onClick={() => setDrawerOpen()}
         >
           {drawerOpen ? (
