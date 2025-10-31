@@ -8,7 +8,7 @@ const CustomerLayout = () => {
   return (
     <>
       <CustomerHeader />
-      <div className={`grow ${location?.pathname !== '/' ? "mt-28" : "" }`}>
+      <div className={`grow ${location?.pathname !== '/blk2' ? "mt-28" : "" }`}>
         <Outlet />
       </div>
       <CustomerFooter />

@@ -74,7 +74,7 @@ export default function App() {
             <CssBaseline />
             <Router>
               <Routes>
-                <Route path="/" element={<CustomerLayout />}>
+                <Route path="/blk2" element={<CustomerLayout />}>
                   <Route index element={<Home />} />
                   <Route path="blogs" element={<Blogs />} />
                   <Route path="Ui" element={<UI />}>
@@ -95,15 +95,15 @@ export default function App() {
                     <Route path="login-formik" element={<LoginFormik />} />
                     <Route path="login-formik2" element={<LoginFormik2 />} />
                   </Route>
-                  <Route path="/portfolio" element={<Portfolio/>}/>
-                  <Route path="/employment" element={<Employment/>}/>
-                  <Route path="/aboutus" element={<AboutUs/>}/>
-                  <Route path="/contactus" element={<ContactUs/>}/>
+                  <Route path="portfolio" element={<Portfolio/>}/>
+                  <Route path="employment" element={<Employment/>}/>
+                  <Route path="aboutus" element={<AboutUs/>}/>
+                  <Route path="contactus" element={<ContactUs/>}/>
                   <Route path="*" element={<NoPage />} />
                 </Route>
                 <Route path="/blk" element={<AdminLayout />}>
                 </Route>
-                <Route path="/enhanced" element={< EnhancedLayout/>}>
+                <Route path="/" element={< EnhancedLayout/>}>
                 <Route index element={<DashboardPage />} />
                 <Route path="dashboard" element={<DashboardPage />} />
                 </Route>
